@@ -11,6 +11,7 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'evanleck/vim-svelte'
 
 " Themes
 Plug 'jacoborus/tender.vim'
