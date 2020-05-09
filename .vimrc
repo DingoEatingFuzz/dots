@@ -19,6 +19,7 @@ Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
+" Basics
 set number
 set tabstop=2
 set shiftwidth=2
@@ -31,6 +32,13 @@ set nostartofline
 set ruler
 set showmode
 set title
+
+" Don't put swap files and such in the working dir
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+if exists("&undodir")
+  set undodir=~/.vim/undo
+endif
 
 " Color theme
 set termguicolors
