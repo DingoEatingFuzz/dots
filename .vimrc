@@ -53,6 +53,8 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " FZF
 nnoremap <C-p> :<C-u>GitFiles<CR>
 nnoremap <C-o> :<C-u>Files<CR>
+nnoremap <C-]> :bnext<CR>
+nnoremap <C-[> :bprevious<CR>
 
 " Pane management
 nnoremap <C-J> <C-W><C-J>
