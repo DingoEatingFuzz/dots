@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+# Use Git for Window's credential store to only provide credentials once
+git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec/git-core/git-credential-manager.exe"
