@@ -1,8 +1,10 @@
 # Configure Go
 export GOPATH=$(go env GOPATH)
+# Configure Volta
+export VOLTA_HOME="/home/michael/.volta"
 
 # Path all the things
-export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:$HOME/bin:$(go env GOPATH)/bin";
+export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:$HOME/bin:$(go env GOPATH)/bin:$VOLTA_HOME/bin";
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"
@@ -31,6 +33,9 @@ fi;
 if type _git &> /dev/null && [ -f /usr/local/etc/bash_completion.d/git-completion.bash ]; then
   complete -o default -o nospace -F _git g;
 fi;
+
+# Make Ctrl+S work
+[ -n "$PS1" ] && stty -ixon;
 
 # Add tab completion for SSH hostnames based on ~/.ssh/config, ignoring wildcards
 [ -e "$HOME/.ssh/config" ] && complete -o "default" -o "nospace" -W "$(grep "^Host" ~/.ssh/config | grep -v "[?*]" | cut -d " " -f2 | tr ' ' '\n')" scp sftp ssh;
