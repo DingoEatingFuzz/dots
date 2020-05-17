@@ -12,6 +12,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'evanleck/vim-svelte'
+Plug 'jxnblk/vim-mdx-js'
 
 " Themes
 Plug 'jacoborus/tender.vim'
