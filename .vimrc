@@ -13,6 +13,7 @@ Plug 'joukevandermaas/vim-ember-hbs'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'evanleck/vim-svelte'
 Plug 'jxnblk/vim-mdx-js'
+Plug 'airblade/vim-gitgutter'
 
 " Themes
 Plug 'jacoborus/tender.vim'
