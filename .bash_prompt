@@ -48,7 +48,7 @@ prompt_git() {
 
     [ -n "${s}" ] && s=" [${s}]";
 
-		if [ $branchName = master ]; then
+		if [[ $branchName = master || $branchName = main ]]; then
 			echo -e "${1}${bold}${white}${branchName}${blue}${s}";
 		else
 		  echo -e "${1}${violet}${branchName}${blue}${s}";
