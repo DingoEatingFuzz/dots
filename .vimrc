@@ -14,6 +14,8 @@ Plug 'Quramy/vim-js-pretty-template'
 Plug 'evanleck/vim-svelte'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'airblade/vim-gitgutter'
+Plug 'hashivim/vim-terraform'
+Plug 'leafgarland/typescript-vim'
 
 " Themes
 Plug 'jacoborus/tender.vim'
@@ -35,6 +37,8 @@ set nostartofline
 set ruler
 set showmode
 set title
+set autoread
+set hidden
 
 " Don't put swap files and such in the working dir
 set backupdir=~/.vim/backups
@@ -97,7 +101,7 @@ function! s:check_back_space() abort
 endfunction
 
 " Use <c-space> to trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <silent><expr> <c-@> coc#refresh()
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -107,7 +111,8 @@ nmap <silent> gr <Plug>(coc-references)
 
 let g:coc_global_extensions = [
 \   'coc-ember',
-\   'coc-go'
+\   'coc-go',
+\   'coc-tsserver'
 \]
 
 " JS Pretty Template
