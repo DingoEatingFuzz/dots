@@ -3,8 +3,11 @@ export GOPATH=$(go env GOPATH)
 # Configure Volta
 export VOLTA_HOME="/home/michael/.volta"
 
+# HashiCorp Path
+export HASHICORP_PATH="$HOME/work/cloud-makefiles"
+
 # Path all the things
-export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:$HOME/bin:$(go env GOPATH)/bin:$VOLTA_HOME/bin";
+export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:$HOME/bin:$(go env GOPATH)/bin:$VOLTA_HOME/bin:$HASHICORP_PATH/bin";
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"
