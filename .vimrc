@@ -16,6 +16,7 @@ Plug 'jxnblk/vim-mdx-js'
 Plug 'airblade/vim-gitgutter'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
+Plug 'editorconfig/editorconfig-vim'
 
 " Themes
 Plug 'jacoborus/tender.vim'
