@@ -10,7 +10,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'joukevandermaas/vim-ember-hbs'
-Plug 'Quramy/vim-js-pretty-template'
 Plug 'evanleck/vim-svelte'
 Plug 'jxnblk/vim-mdx-js'
 Plug 'airblade/vim-gitgutter'
@@ -115,10 +114,3 @@ let g:coc_global_extensions = [
 \   'coc-go',
 \   'coc-tsserver'
 \]
-
-" JS Pretty Template
-call jspretmpl#register_tag('hbs', 'handlebars')
-
-autocmd FileType javascript JsPreTmpl
-autocmd FileType javascript.jsx JsPreTmpl
-autocmd FileType typescript JsPreTmpl
