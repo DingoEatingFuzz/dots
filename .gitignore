@@ -15,3 +15,6 @@ Thumbs.db
 .Spotlight-V100
 .Trashes
 
+
+# Private configuration
+.private
