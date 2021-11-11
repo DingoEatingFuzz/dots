@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
+Plug 'Quramy/vim-js-pretty-template'
 
 " Themes
 Plug 'jacoborus/tender.vim'
@@ -114,3 +115,13 @@ let g:coc_global_extensions = [
 \   'coc-go',
 \   'coc-tsserver'
 \]
+
+" JS Pretty Template
+call jspretmpl#register_tag('hbs', 'handlebars')
+
+autocmd FileType javascript JsPreTmpl
+autocmd FileType javascript.jsx JsPreTmpl
+autocmd FileType typescript JsPreTmpl
+
+" compat with leafgarland/typescript-vim
+autocmd FileType typescript syn clear foldBraces
