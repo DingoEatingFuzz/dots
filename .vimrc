@@ -83,8 +83,10 @@ let g:strip_whitespace_confirm=0
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
+\   'handlebars': ['prettier'],
 \}
 
 " Rust formatting
