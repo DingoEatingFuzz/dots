@@ -17,7 +17,7 @@ export NVM_DIR="$HOME/.nvm"
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.private is used for aliases and functions that aren't committed
-for file in ~/.{path,bash_prompt,functions,private}; do
+for file in ~/.{path,bash_prompt,functions,private,cargo/env}; do
   [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

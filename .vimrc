@@ -17,6 +17,7 @@ Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'rust-lang/rust.vim'
 
 " Themes
 Plug 'jacoborus/tender.vim'
@@ -81,6 +82,9 @@ let g:ale_fixers = {
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
 \}
+
+" Rust formatting
+let g:rustfmt_autosave = 1
 
 " CoC Config + Language Servers
 set updatetime=300
