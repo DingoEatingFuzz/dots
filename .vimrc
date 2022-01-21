@@ -18,6 +18,10 @@ Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'rust-lang/rust.vim'
+Plug 'heavenshell/vim-jsdoc', {
+  \ 'for': ['javascript', 'javascript.jsx','typescript'],
+  \ 'do': 'make install'
+\}
 
 " Themes
 Plug 'jacoborus/tender.vim'
