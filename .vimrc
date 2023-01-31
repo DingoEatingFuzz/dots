@@ -69,6 +69,7 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 " FZF
 nnoremap <C-p> :<C-u>GitFiles<CR>
 nnoremap <C-o> :<C-u>Files<CR>
+nnoremap <C-S-o> :<C-u>Rg<CR>
 nnoremap <C-i> :<C-u>bnext<CR>
 nnoremap <C-u> :<C-u>bprevious<CR>
 
