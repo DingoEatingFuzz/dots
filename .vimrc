@@ -16,6 +16,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'hashivim/vim-terraform'
 Plug 'leafgarland/typescript-vim'
 Plug 'editorconfig/editorconfig-vim'
+" This plugin causes syntax highlighting issues in JS that uses
+" template strings and regular expressions.
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'rust-lang/rust.vim'
 Plug 'heavenshell/vim-jsdoc', {
