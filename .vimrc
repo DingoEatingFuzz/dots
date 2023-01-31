@@ -59,6 +59,10 @@ set background=dark
 colorscheme OceanicNext
 let g:airline_theme='oceanicnext'
 
+" Gnarly hack to make fold colors more to my preference (i.e., subtle)
+hi Folded guibg=#172730
+hi Folded guifg=#384855
+
 " NERDTree
 nnoremap <C-n> :NERDTreeToggle<CR>
 
@@ -135,3 +139,7 @@ autocmd FileType typescript JsPreTmpl
 
 " compat with leafgarland/typescript-vim
 autocmd FileType typescript syn clear foldBraces
+
+set foldmethod=syntax
+set foldcolumn=1
+set foldlevelstart=50
