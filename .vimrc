@@ -19,11 +19,8 @@ Plug 'editorconfig/editorconfig-vim'
 " This plugin causes syntax highlighting issues in JS that uses
 " template strings and regular expressions.
 Plug 'Quramy/vim-js-pretty-template'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'rust-lang/rust.vim'
-Plug 'heavenshell/vim-jsdoc', {
-  \ 'for': ['javascript', 'javascript.jsx','typescript'],
-  \ 'do': 'make install'
-\}
 
 " Themes
 Plug 'jacoborus/tender.vim'
