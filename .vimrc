@@ -21,6 +21,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Quramy/vim-js-pretty-template'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Themes
 Plug 'jacoborus/tender.vim'
