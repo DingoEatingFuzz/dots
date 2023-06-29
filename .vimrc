@@ -91,7 +91,10 @@ let g:ale_fixers = {
 \   'typescript': ['prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier'],
-\   'handlebars': ['prettier'],
+\   'handlebars': ['prettier']
+\}
+let g:ale_linters = {
+\   'rust': ['rust-analyzer']
 \}
 
 " Rust formatting
@@ -135,7 +138,8 @@ nmap <silent> gr <Plug>(coc-references)
 let g:coc_global_extensions = [
 \   'coc-ember',
 \   'coc-go',
-\   'coc-tsserver'
+\   'coc-tsserver',
+\   'coc-rust-analyzer'
 \]
 
 " JS Pretty Template
