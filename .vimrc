@@ -94,7 +94,8 @@ let g:ale_fixers = {
 \   'handlebars': ['prettier']
 \}
 let g:ale_linters = {
-\   'rust': ['rust-analyzer']
+\   'rust': ['rust-analyzer'],
+\   'javascript': ['prettier', 'eslint']
 \}
 
 " Rust formatting
