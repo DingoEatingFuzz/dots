@@ -64,7 +64,7 @@ const appSpeedDial = [
   'Google Chrome',
   'Slack',
   'Figma',
-  'Notion',
+  'Nota',
   'Spotify',
 ];
 
