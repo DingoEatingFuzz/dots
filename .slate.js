@@ -23,8 +23,40 @@ cardinals.forEach((direction, idx) => {
 
 // Default throws
 [0, 1, 2].forEach(screen => {
-  S.bind(`${screen+1}:ctrl;alt`, S.op('throw', { screen, width: 'screenSizeX', height: 'screenSizeY' }));
+  S.bind(`${screen+1}:ctrl;alt`, win => {
+    const count = S.screenCount();
+    if (count > 1) {
+      win.doOperation(S.op('throw', { screen, width: 'screenSizeX', height: 'screenSizeY' }));
+    } else {
+      // Based on the screen number and the window size, cycle through size variations
+      const width = win.size().width;
+      const sWidth = win.screen().rect().width;
+      const pct = width / sWidth;
+      if (screen === 0) {
+        const newWidth = pct <= 0.4 ? sWidth
+          : pct <= 0.6 ? sWidth / 3
+          : sWidth / 2;
+        win.doOperation(S.op('throw', { screen, width: newWidth, height: 'screenSizeY' }));
+      } else if (screen === 1) {
+        const newWidth = pct <= 0.4 || pct >= 0.6 ? sWidth / 2 : sWidth / 3;
+        win.doOperation(S.op('throw', { screen, width: newWidth, height: 'screenSizeY', x: newWidth }));
+      } else {
+        win.doOperation(S.op('throw', { screen, width: sWidth / 3, height: 'screenSizeY', x: sWidth / 3 * 2 }));
+      }
+    }
+  });
 });
+
+// Two-thirds throws
+[0, 1].forEach(screen => {
+  S.bind(`${screen+1}:ctrl;alt;shift`, win => {
+    if (S.screenCount() === 1) {
+      const sWidth = win.screen().rect().width;
+      win.doOperation(S.op('throw', { screen, width: sWidth / 3 * 2, height: 'screenSizeY', x: sWidth / 3 * screen }))
+    }
+  });
+});
+
 
 // Access frequently used applications with ctrl+#
 const appSpeedDial = [
