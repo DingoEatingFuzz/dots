@@ -7,7 +7,7 @@ export VOLTA_HOME="/home/michael/.volta"
 export HASHICORP_PATH="$HOME/work/cloud-makefiles"
 
 # Path all the things
-export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:$HOME/bin:$(go env GOPATH)/bin:$VOLTA_HOME/bin:$HASHICORP_PATH/bin";
+export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/usr/local/bin:/opt/homebrew/bin:$HOME/bin:$(go env GOPATH)/bin:$VOLTA_HOME/bin:$HASHICORP_PATH/bin";
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"
