@@ -1,3 +1,6 @@
+# First path, because we use things in the PATH
+export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/$BUN_INSTALL/bin:$VOLTA_HOME/bin:usr/local/bin:/opt/homebrew/bin:$HOME/bin"
+
 # Configure Go
 export GOPATH=$(go env GOPATH)
 # Configure Volta
@@ -10,7 +13,7 @@ export BUN_INSTALL="$HOME/.bun"
 export HASHICORP_PATH="$HOME/work/cloud-makefiles"
 
 # Path all the things
-export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:/$BUN_INSTALL/bin:$VOLTA_HOME/bin:usr/local/bin:/opt/homebrew/bin:$HOME/bin:$(go env GOPATH)/bin:$HASHICORP_PATH/bin";
+export PATH="$PATH:$(go env GOPATH)/bin:$HASHICORP_PATH/bin"
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"
