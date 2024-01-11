@@ -13,7 +13,7 @@ local sources = {
 
   -- webdev stuff
   -- b.formatting.deno_fmt, -- choosed deno for ts/js files cuz its very fast!
-  b.diagnostics.eslint_d,
+  b.diagnostics.eslint,
   -- so prettier works only on these filetypes
   b.formatting.prettier.with {
     filetypes = {
@@ -31,6 +31,10 @@ local sources = {
 
   -- cpp
   b.formatting.clang_format,
+
+  -- golang
+  b.formatting.gofmt,
+  b.formatting.goimports,
 }
 
 local template_lint = {

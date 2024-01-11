@@ -47,6 +47,10 @@ local plugins = {
     end,
   },
 
+  {
+    "ziglang/zig.vim"
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",

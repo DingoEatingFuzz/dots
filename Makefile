@@ -17,3 +17,6 @@ setup-vim:
 
 wsl:
 	./.wsl
+
+nvim:
+	cp -r ~/nvchad/* ~/.config/nvim/lua/custom/
