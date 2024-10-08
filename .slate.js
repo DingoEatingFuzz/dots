@@ -60,7 +60,7 @@ cardinals.forEach((direction, idx) => {
 
 // Access frequently used applications with ctrl+#
 const appSpeedDial = [
-  'iTerm2',
+  'Alacritty',
   'Google Chrome',
   'Slack',
   'Figma',

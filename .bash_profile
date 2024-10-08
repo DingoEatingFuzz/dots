@@ -1,22 +1,15 @@
-# First path, because we use things in the PATH
-export PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:usr/local/bin:/opt/homebrew/bin:$HOME/bin"
+export HOMEBREW_PATH="/opt/homebrew"
+export ROOT_PATH="$PATH:/Library/Frameworks/GDAL.framework/Programs:usr/local/bin:$HOME/bin"
+export PATH="$ROOT_PATH:$HOMEBREW_PATH/bin"
 
-# Configure Go
 export GOPATH=$(go env GOPATH)
-
-# Configure Volta
 export VOLTA_HOME="$HOME/.volta"
-
-# Configure bun
 export BUN_INSTALL="$HOME/.bun"
-
 export ZIG_PATH="$HOME/zig"
-
-# HashiCorp Path
 export HASHICORP_PATH="$HOME/work/cloud-makefiles"
 
-# Path all the things
-export PATH="$PATH:$(go env GOPATH)/bin:$VOLTA_HOME/bin:/$BUN_INSTALL/bin:$HASHICORP_PATH/bin:/$ZIG_PATH"
+# Path all the things, with Homebrew at the end (so bespoke installs override brew installs)
+export PATH="$ROOT_PATH:$GOPATH/bin:$VOLTA_HOME/bin:$BUN_INSTALL/bin:$HASHICORP_PATH/bin:$ZIG_PATH:$HOMEBREW_PATH/bin"
 
 # Configure NVM
 export NVM_DIR="$HOME/.nvm"

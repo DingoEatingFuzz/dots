@@ -51,6 +51,14 @@ local plugins = {
     "ziglang/zig.vim"
   },
 
+  {
+    "danymat/neogen",
+    dependencies = "nvim-treesitter/nvim-treesitter",
+    config = true,
+    version = "*",
+    lazy = false,
+  }
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
