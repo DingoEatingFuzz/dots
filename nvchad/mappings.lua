@@ -1,13 +1,9 @@
----@type MappingsTable
-local M = {}
+require("nvchad.mappings")
 
-M.general = {
-  n = {
-    [";"] = { ":", "enter command mode", opts = { nowait = true } },
-    ["<leader>dd"] = { ":Neogen <CR>", "Write docs for class/method/etc" },
-  },
-}
+-- add yours here
 
--- more keybinds!
+local map = vim.keymap.set
 
-return M
+map("n", ";", ":", { desc = "CMD enter command mode" })
+map("n", "<leader>dd", ":Neogen <CR>", { desc = ":Neogen <CR>", "Write docs for class/method/etc" })
+map("i", "jk", "<ESC>")
