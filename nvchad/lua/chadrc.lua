@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {}
 
-M.ui = {
+M.base46 = {
 	theme = "oceanic-next",
 	theme_toggle = { "oceanic-next", "one_light" },
 
@@ -13,10 +13,5 @@ M.ui = {
 		NvimTreeOpenedFolderName = { fg = "green", bold = true },
 	},
 }
-
-M.plugins = "custom.plugins"
-
--- check core.mappings for table structure
-M.mappings = require("custom.mappings")
 
 return M

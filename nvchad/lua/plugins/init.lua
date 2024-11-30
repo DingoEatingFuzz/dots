@@ -50,9 +50,17 @@ local plugins = {
 	{
 		"danymat/neogen",
 		dependencies = "nvim-treesitter/nvim-treesitter",
-		config = true,
-		version = "*",
-		lazy = false,
+    cmd = "Neogen",
+    keys = {
+      {
+        "<leader>dd",
+        function()
+          require("neogen").generate({})
+        end,
+        desc = "Generate Annotations",
+      },
+    },
+    opts = require("configs.neogen")
 	},
 }
 

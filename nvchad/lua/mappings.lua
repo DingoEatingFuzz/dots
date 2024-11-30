@@ -5,5 +5,7 @@ require("nvchad.mappings")
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
-map("n", "<leader>dd", ":Neogen <CR>", { desc = ":Neogen <CR>", "Write docs for class/method/etc" })
+map("n", "<C-t>", function()
+  require("nvchad.themes").open()
+end, {})
 map("i", "jk", "<ESC>")
