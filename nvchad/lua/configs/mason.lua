@@ -10,6 +10,13 @@ return {
 		"typescript-language-server",
 		"deno",
 		"prettier",
+		"prettierd",
+		"eslint_d",
+		"ember-language-server",
+
+		-- other dev stuff
+		"zls",
+		"rust-analyzer",
 
 		-- c/cpp stuff
 		"clangd",
