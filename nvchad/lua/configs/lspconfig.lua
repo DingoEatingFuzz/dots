@@ -14,6 +14,7 @@ local servers = {
 	"gopls",
 	"zls",
 	"eslint",
+	"terraformls",
 }
 local nvlsp = require("nvchad.configs.lspconfig")
 

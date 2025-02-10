@@ -1,10 +1,9 @@
 -- local overrides = require("custom.configs.overrides")
 
 local plugins = {
-
 	{
 		"stevearc/conform.nvim",
-		-- event = 'BufWritePre', -- uncomment for format on save
+		event = "BufWritePre", -- uncomment for format on save
 		opts = require("configs.conform"),
 	},
 
@@ -50,17 +49,17 @@ local plugins = {
 	{
 		"danymat/neogen",
 		dependencies = "nvim-treesitter/nvim-treesitter",
-    cmd = "Neogen",
-    keys = {
-      {
-        "<leader>dd",
-        function()
-          require("neogen").generate({})
-        end,
-        desc = "Generate Annotations",
-      },
-    },
-    opts = require("configs.neogen")
+		cmd = "Neogen",
+		keys = {
+			{
+				"<leader>dd",
+				function()
+					require("neogen").generate({})
+				end,
+				desc = "Generate Annotations",
+			},
+		},
+		opts = require("configs.neogen"),
 	},
 }
 
